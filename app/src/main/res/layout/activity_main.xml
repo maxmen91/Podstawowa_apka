@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/Layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/background_light"
+    android:visibility="visible"
+    tools:context=".MainActivity"
+    android:onClick="hints"
+    >
+
+    <LinearLayout
+        android:id="@+id/transitions_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="50px"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.517">
+
+        <TextView
+            android:id="@+id/zaloguj"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed-light"
+            android:onClick="witamonclick"
+            android:text="Zaloguj się"
+            android:padding="20dp"
+            android:textSize="36sp" />
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed-light"
+            android:hint="Wprowadź email"
+            android:inputType="textEmailAddress"
+            android:padding="20dp"
+            android:textSize="24sp"
+            android:visibility="gone" />
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed-light"
+            android:hint="Wprowadź Hasło"
+            android:inputType="textPassword"
+            android:textSize="24sp"
+            android:visibility="gone"
+            android:imeOptions="actionSend"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/przycisk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Zaloguj"
+            android:onClick="logowanie"
+            android:visibility="gone"
+            android:textColor="@android:color/holo_purple"
+            app:backgroundTint="@android:color/darker_gray"
+            />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/hint"
+        android:layout_width="308dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="16dp"
+        android:text="Hold to switch between nightmode and normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="gone" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
