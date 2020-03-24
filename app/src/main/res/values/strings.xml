@@ -4,4 +4,10 @@
     <string name="nightmode">nightmode</string>
     <string name="moon">🌙</string>
     <string name="sun">☀</string>
+    <string name="zarejestruj">Nie masz konta? <font color='#0000FF'>Zarejestruj się</font></string>
+    <string name="zarejestruj_in">Nie masz konta? <font color='#FFFF00'>Zarejestruj się</font></string>
+    <string name="password_strength_weak">Weak</string>
+    <string name="password_strength_medium">Medium</string>
+    <string name="password_strength_strong">Strong</string>
+    <string name="password_strength_very_strong">Very Strong</string>
 </resources>

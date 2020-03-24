@@ -6,15 +6,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/background_light"
-    android:visibility="visible"
-    tools:context=".MainActivity"
     android:onClick="hints"
-    >
+    android:visibility="visible"
+    tools:context=".MainActivity">
 
     <LinearLayout
         android:id="@+id/transitions_container"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
         android:gravity="center"
         android:orientation="vertical"
         android:padding="50px"
@@ -31,8 +32,8 @@
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-condensed-light"
             android:onClick="witamonclick"
-            android:text="Zaloguj się"
             android:padding="20dp"
+            android:text="Zaloguj się"
             android:textSize="36sp" />
 
         <EditText
@@ -40,7 +41,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-condensed-light"
-            android:hint="Wprowadź email"
+            android:hint="Login"
             android:inputType="textEmailAddress"
             android:padding="20dp"
             android:textSize="24sp"
@@ -51,22 +52,21 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-condensed-light"
-            android:hint="Wprowadź Hasło"
+            android:hint="Hasło"
+            android:imeOptions="actionSend"
             android:inputType="textPassword"
             android:textSize="24sp"
-            android:visibility="gone"
-            android:imeOptions="actionSend"/>
+            android:visibility="gone" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/przycisk"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Zaloguj"
             android:onClick="logowanie"
-            android:visibility="gone"
+            android:text="Zaloguj"
             android:textColor="@android:color/holo_purple"
-            app:backgroundTint="@android:color/darker_gray"
-            />
+            android:visibility="gone"
+            app:backgroundTint="@android:color/darker_gray" />
 
     </LinearLayout>
 
@@ -80,7 +80,35 @@
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:visibility="gone" />
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/Zarejestruj"
+        android:layout_width="189dp"
+        android:layout_height="23dp"
+        android:layout_marginStart="16dp"
+        android:fontFamily="sans-serif-condensed-light"
+        android:onClick="RegisterIntent"
+        android:text="@string/zarejestruj"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/hint"
+        app:layout_constraintVertical_bias="0.95" />
+
+    <TextView
+        android:id="@+id/blad"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="136dp"
+        android:layout_marginBottom="196dp"
+        android:text="Błędne hasło lub login"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

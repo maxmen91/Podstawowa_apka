@@ -3,11 +3,15 @@ package com.example.apkanameintelefon;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.media.MediaPlayer;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.view.View;
 import android.view.Window;
+import android.widget.Button;
 
 public class AfterLoginActivity extends AppCompatActivity {
+    private String token;
+    private Button wyloguj;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -15,8 +19,8 @@ public class AfterLoginActivity extends AppCompatActivity {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getSupportActionBar().hide();
         setContentView(R.layout.activity_after_login);
-        final MediaPlayer mp = MediaPlayer.create(this, R.raw.caramell);
-        mp.start();
+        token= getSharedPreferences("sharedPrefs",MODE_PRIVATE).getString("token",null);
+        wyloguj = (Button) findViewById(R.id.wyloguj);
     }
     @Override
     public void onBackPressed() {
@@ -24,6 +28,14 @@ public class AfterLoginActivity extends AppCompatActivity {
         a.addCategory(Intent.CATEGORY_HOME);
         a.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(a);
+    }
+    public void wyloguj(View v){
+        SharedPreferences sharedPreferences = getSharedPreferences("sharedPrefs",MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.remove("token").commit();
+        Intent a = new Intent(this,LoginActivity.class);
+        startActivity(a);
+        finish();
     }
 
 }
