@@ -139,7 +139,7 @@ public class RegisterActivity extends AppCompatActivity {
             client.newCall(request).enqueue(new Callback() {
                 @Override
                 public void onFailure(@NotNull Call call, @NotNull IOException e) {
-                    System.out.println("jebać disa");
+                    System.out.println("Failuer");
                 }
 
                 @Override
