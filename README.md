@@ -1,8 +1,5 @@
 ---
 
-
----
-
 <h2 id="podstawowa-aplikacja-z-autoryzacją-oraz-serwerem-tokenów">Podstawowa aplikacja z autoryzacją oraz serwerem tokenów</h2>
 <h2 id="działanie">Działanie</h2>
 <p><img src="https://i.imgur.com/VHOh5wG.gif" alt="enter image description here"></p>
