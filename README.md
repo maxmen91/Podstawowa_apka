@@ -16,7 +16,4 @@ Zaprogramowałem również dark mode, który uruchamiany jest przy przytrzymaniu
 -Android Studio (Cała aplikacja napisana jest w języku Java) API V. 25 (Od Androida 7.1 wzwyż)<br>
 -Intellij z nakładką Tomcat Smart i oczywiście serwerem TomEE<br>
 -Wbudowany w Android Studio Emulator</p>
-<h2 id="serwer">Serwer</h2>
-<p>Załączam również link do serwera jax-rs <a href="https://github.com/maxmen91/Serwikjwt">https://github.com/maxmen91/Serwikjwt</a><br>
-Pozdrawiam Piotr Wójcik 4T</p>
 
